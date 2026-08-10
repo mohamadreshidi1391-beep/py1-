@@ -1,17 +1,17 @@
 import tkinter as tk
 def x():
-    m=float(entry.get())
-    m=m*100
-    p=m*2204.62
+    cm=float(entry.get())
+    cm=cm/100
+    p=cm*0.022
 
-    label2.config(text=f'{m }cm\n  {p}pounds')
+    label2.config(text=f'{cm }m\n  {p}pounds')
 root = tk.Tk()
 
 root.title('izeh =mir')
 
 root.geometry('300x200')
 
-label = tk.Label(root, text='enter weight m')
+label = tk.Label(root, text='enter weight cm')
 
 label.pack()
 
@@ -22,8 +22,10 @@ entry.pack()
 button = tk.Button(root, text='convert', command=x)
 button.pack()
 
-label2 = tk.Label(root, text=  'تبدیل متر به سانتی متر 😊 😁'  )
+label2 = tk.Label(root, text=  'تبدیل سانتی متر به متر 💕😊 '  )
 
 label2.pack()
 
 root.mainloop()
+
+

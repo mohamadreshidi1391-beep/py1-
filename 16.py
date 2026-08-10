@@ -1,10 +1,9 @@
 import tkinter as tk
 def x():
     m=float(entry.get())
-    m=m*100
-    p=m*2204.62
 
-    label2.config(text=f'{m }cm\n  {p}pounds')
+
+    label2.config(text=f'{m}\n  ')
 root = tk.Tk()
 
 root.title('izeh =mir')
@@ -22,7 +21,7 @@ entry.pack()
 button = tk.Button(root, text='convert', command=x)
 button.pack()
 
-label2 = tk.Label(root, text=  'تبدیل متر به سانتی متر 😊 😁'  )
+label2 = tk.Label(root, text=  ' تبدیل به مسافت💕😊 '  )
 
 label2.pack()
 
