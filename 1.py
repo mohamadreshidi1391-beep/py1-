@@ -1,15 +1,16 @@
-import pygame
-pygame.init()
-s = pygame.display.set_mode((400, 300))
-car = pygame.image.load("car.png").convert_alpha()
-r = car.get_rect(center=(255, 255))
-speed, run = 5, True
-while run:
-    for e in pygame.event.get():
-        if e.type == pygame.QUIT: run = False
-    k = pygame.key.get_pressed()
-    r.x += (k[pygame.K_RIGHT] - k[pygame.K_LEFT]) * speed
-    r.y += (k[pygame.K_DOWN]  - k[pygame.K_UP])   * speed
-    r.clamp_ip(s.get_rect())
-    s.fill((0,0,0)); s.blit(car, r); pygame.display.flip()
-pygame.quit()
+#محاسبه حق کمیسیون مشاوران املاک برای خرید و فروش ملک
+# ورودی کاربر
+property_value = float(input("ارزش ملک (تومان): "))
+
+# Constants
+commission_rate = 0.0025  # نرخ کمیسیون
+tax_rate = 0.09  # نرخ مالیات بر ارزش افزوده
+
+# محاسبه حق کمیسیون
+commission = property_value * commission_rate
+tax = commission * tax_rate
+total_commission = commission + tax
+
+print(f"حق کمیسیون: {commission} تومان")
+print(f"مالیات: {tax} تومان")
+print(f"جمع حق کمیسیون و مالیات: {total_commission} تومان")
