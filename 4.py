@@ -1,10 +1,7 @@
-# for item in range(10,100,-2):
-    # print(item)
+celsius = int(input("Please enter celsius: "))
+fahrenheit = (celsius * 9/5) + 32
+print(celsius, "Celsius =", fahrenheit, "Fahrenheit")
 
-x=10
-    
-while x < 100:
-        
-        print(x)
-        x +=2
-    
+fahrenheit = 98.6
+celsius = (fahrenheit - 32) * 5/9
+print(fahrenheit,"Fahrenheit =", celsius,"celsius")
