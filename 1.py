@@ -1,23 +1,30 @@
-import tkinter as tk
+from tkinter import *
 from tkinter import messagebox
 
-def hi():
-    h='Hello'
-    messagebox.showinfo("eror", f"welcome and {h}")
-def bye():
-    h='Good bye'
-    messagebox.showinfo("eror", f"{h}")
+def check():
+    username = e1.get()
+    password = e2.get()
+    if username == "admin" and password == "123":
+        messagebox.showinfo("Login Successful", "Welcome!")
+    else:
+        messagebox.showerror("Login Failed", "مگه شوخی دارم")
 
-root = tk.Tk()
-root.title("mohamad")
-root.geometry('300x200')
-label = tk.Label(root, text="Hello!", bg="yellow", fg="red", font='18')
-label.pack()
+top = Tk()
+top.geometry("400x250")
 
-# Second label example
-label = tk.Label(root, text="World!")
-label.pack()
+uname_label = Label(top, text="Username")
+uname_label.place(x=30, y=50)
 
-C:\Users\LAPCcenter\Desktop\p5\1.pytk.Button(root, text="bye", command=bye).pack()
+password_label = Label(top, text="Password")
+password_label.place(x=30, y=90)
 
-root.mainloop()
+e1 = Entry(top, width=20)
+e1.place(x=100, y=50)
+
+e2 = Entry(top, width=20, show='*')
+e2.place(x=100, y=90)
+
+sbmitbtn = Button(top, text="Submit", activebackground="pink", activeforeground="blue", command=check)
+sbmitbtn.place(x=30, y=120)
+
+top.mainloop()

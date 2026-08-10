@@ -1,24 +1,15 @@
-import tkinter as tk
-from tkinter import messagebox
+# Python program to draw a square
+# using Turtle Programming
+import turtle
+skk = turtle.Turtle()
+skk.pensize(3)
+skk.shapesize(2,5,12)
 
-def hi():
-    h='Hello'
-    messagebox.showinfo("tirotir", f"welcome and {h}")
-def bye():
-    h='Good bye'
-    messagebox.showinfo("tirotir", f"{h}")
+# Change the color of both
+skk.color("green", "blue")
 
-root = tk.Tk()
-root.title("KHoozestan")
-root.geometry('300x200')
-label = tk.Label(root, text="Hello!", bg="yellow", fg="red", font='18')
-label.pack()
+for i in range(4):
+    skk.forward(50)
+    skk.right(90)
 
-# Second label example
-label = tk.Label(root, text="World!")
-label.pack()
-
-tk.Button(root, text="hi", command=hi).pack()
-tk.Button(root, text="bye", command=bye).pack()
-
-root.mainloop()
+turtle.done()
