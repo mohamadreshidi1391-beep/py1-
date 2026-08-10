@@ -1,5 +1,8 @@
-#print("esm: ")
-# برای دریافت از صفحه کلید
-a=input('esm: ')
-b=input('ghaza: ')
-print(f"{a} doost dare: {b} xeili zyad!")
+#while-(notfinished)
+notFinished = True
+while notFinished:
+    # comment: 
+    if (input("Finished? y/n : ") == "y"):
+        notFinished = False
+    # end if
+# end while

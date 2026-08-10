@@ -1,7 +1,7 @@
-a="Anisa"
-b="Salad"
-print(a,"doost dare: ", b)
-print("-----------------")
-print("******************")
-print("-----------------")
-print("...................")
+#while-(i<6)
+i = 1
+while i < 6:
+    # comment: 
+    print(i)
+    i += 1
+# end while
